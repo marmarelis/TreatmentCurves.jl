@@ -188,7 +188,7 @@ function log_likelihood(::GammaParam{T},
 end
 
 function sample_prediction(::GammaParam{T}, (alpha, beta)::AbstractVector{T})::T where T
-  Gamma(alpha, beta) |> rand
+  Gamma(alpha, 1/beta) |> rand
 end
 
 
